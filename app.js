@@ -28,7 +28,7 @@ const getWeatherInfo=async ()=>{
         const weatherInfo=await response.json()
         console.log(weatherInfo);
         const {weather,main,name}=weatherInfo
-        containerDiv.innerHTML+=`<div class="weather_info"><p class="city_name">${name}</p><p class="temperature">${main.temp.toPrecision(2)}&degC</p><img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png"/><p>${weather[0].description}</p></div> `
+        containerDiv.innerHTML+=`<p class="city_name">${name}</p><p class="temperature">${main.temp.toPrecision(2)}&degC</p><img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png"/><p>${weather[0].description}</p>`
         input.value="";
     }
     catch(error){
