@@ -22,7 +22,7 @@ const getWeatherInfo=async ()=>{
         const weatherInfo=await response.json()
         console.log(weatherInfo);
         const {weather,main,name}=weatherInfo
-        containerDiv.innerHTML=`${main.temp}${name}${weather[0].description} <img src="http://openweathermap.org/img/wn/10d@2x.png"`
+        containerDiv.innerHTML=`${main.temp}${name}${weather[0].description} <img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png"/>`
     }
     catch(error){
         console.log(error);
